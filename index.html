@@ -3,15 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whac a Mole</title>
-    <link rel="stylesheet" href="mole.css">
-    <script src="mole.js"></script>
+    <title>Home Page</title>
+    
+    <link rel="stylesheet" href="./index.css">
+    <!--<link rel="stylesheet" href="assets/css/bootstrap.min.css">-->
+		
+		<!-- bootsnav -->
+		<!--<link rel="stylesheet" href="assets/css/bootsnav.css" >	-->
+    <script src="./index.js"></script>
 </head>
 <body>
-    <h1>Whac a Mole</h1>
-    <h2 id="score">0</h2>
-    <!-- 3x3 -->
-    <div id="board">
+
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="bandicoots.html">BANDICOOTS!</a>
+    <a href="whackabandicoot.html">PLAY WHACK-A-BANDICOOT</a>
+    <a href="https://github.com/EmmanuelVanderson-E20646">My GitHub</a>
+    <!--<li class="scroll"><a href="#CONTACT">CONTACT</a></li>-->
+  </nav>
+
+    <!-- Video element -->
+  <video autoplay muted loop id="video-bg">
+    <source src="./video/HnH-bg-vid.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Content overlay -->
+  <div class="content">
+    <h3>It's a lifestyle, a way of life.</h3>
+    <div class="row">
+      <div class = "col-md-3"></div>
+        <p id="myMessage" class = "col-md-6">I made this website for several reasons. To showcase some of the technical
+        skills that I have at my disposal, first and foremost. This simple website 
+        was obviously made with a combination of knowledge in HTML, CSS, and 
+        JavaScript. Foundational knowledge when it comes to web development. I've
+        chosen to combine this knowledge with newer skills I've gained in the cloud
+        spectrum (I'm actually having a lot of fun learning and practicing this 
+        type of stuff, I must admit). We have Amazon Web Services to thank for what 
+        you are viewing here today.
+        This website is hosted on Amazon S3. I created a custom domain name using
+        Amazon Route53. Used an S3 bucket to host a sample website. Then I enabled
+        static website hosting and directed the domain to that S3 bucket. Call me
+        a nerd but this is pretty cool stuff to me. I'm going to keep working on
+        this, of course! This is only the beginning!
+        Also wanted to have a website that I host, all by myself, that I can do whatever
+        with. Just thinking about the vastness of possibilities gets me excited! I think
+        I'll start by filling that nav bar at the top with links to all sorts of things that
+        I enjoy, so you can get a feel for my personality and interests all while
+        assessing the skills that I had to utilize in order to make all of this happen.
+        Well, by the time you see this, I'll be done. So go ahead and get started discovering
+        my website, Humble&Hungry!
+        <div class = "col-md-3"></div>
+    </p>
     </div>
+
+    <!--<footer id="CONTACT">
+      <div>
+        <p>
+          &copy; Going to put some copyright information right <a href="#">HERE</a>
+        </p>
+      </div>
+
+      <div>
+        <p>Personal: the6thedv@gmail.com</p>
+        <p>Work: Evanderson@aflac.com</p>
+        <p>Cell: +1 (706) 617-1240</p>
+      </div>
+    </footer>-->
+  </div>
+
 </body>
 </html>

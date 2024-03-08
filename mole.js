@@ -5,6 +5,8 @@ let gameOver = false;
 
 window.onload = function() {
     setGame();
+    //attempted to start audio 1 second after window has loaded, doesn't work
+    setTimeout(startAudio, 1000);
 }
 
 function setGame() {
@@ -18,6 +20,7 @@ function setGame() {
     }
     setInterval(setMole, 1000); // 1000 miliseconds = 1 second, every 1 second call setMole
     setInterval(setPlant, 2000); // 2000 miliseconds = 2 seconds, every 2 second call setPlant
+    themeMusic.play();
 }
 
 function getRandomTile() {
@@ -34,7 +37,7 @@ function setMole() {
         currMoleTile.innerHTML = "";
     }
     let mole = document.createElement("img");
-    mole.src = "./monty-mole.png";
+    mole.src = "./images/crash-bandicoot.png";
 
     let num = getRandomTile();
     if (currPlantTile && currPlantTile.id == num) {
@@ -52,7 +55,7 @@ function setPlant() {
         currPlantTile.innerHTML = "";
     }
     let plant = document.createElement("img");
-    plant.src = "./piranha-plant.png";
+    plant.src = "./images/aku-aku.png";
 
     let num = getRandomTile();
     if (currMoleTile && currMoleTile.id == num) {
@@ -68,10 +71,33 @@ function selectTile() {
     }
     if (this == currMoleTile) {
         score += 10;
+        playWoah();
         document.getElementById("score").innerText = score.toString(); //update score html
     }
     else if (this == currPlantTile) {
         document.getElementById("score").innerText = "GAME OVER: " + score.toString(); //update score html
+        stopAudio();
+        playAku();
         gameOver = true;
     }
+}
+
+function stopAudio() {
+    var audio = document.getElementById("theme");
+    audio.pause();
+  }
+function playAku()
+{
+    var audio = new Audio("./audio/aku_aku.mp3");
+    audio.play();
+}
+function playWoah()
+{
+    var audio = new Audio("./audio/crash-bandicoot-WOAHsoundeffect.mp3");
+    audio.play();
+}
+function startAudio()
+{
+    var audio = document.getElementById("theme");
+    audio.play();
 }

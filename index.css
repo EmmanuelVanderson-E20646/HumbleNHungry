@@ -1,0 +1,80 @@
+h1, h2{
+    color:white;
+}
+
+body {
+    
+    text-align: center;
+    background: url("./images/HnH-bg-pic.png");
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+  }
+/* Add additional styles for content overlay if needed */
+.content {
+    position: absolute;
+    bottom: -35%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  nav {
+    background-color: #004a72;
+    overflow: hidden;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+  nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    background-color: #ffb700;
+  }
+
+  footer {
+    background-color: #004a72;
+    overflow: hidden;
+    color: white;
+    column-count: 2;
+    text-align:left;
+  }
+
+  @media screen and (max-width: 600px) {
+    nav a {
+      float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+  p{
+    margin: 12;
+    padding: 12;
+  }
+  #CONTACT div{
+    column-span: none;
+  }
